@@ -39,4 +39,8 @@ $susy: (
   &-omega {
     @include last;
   }
+
+  &-break {
+    @include break;
+  }
 }
