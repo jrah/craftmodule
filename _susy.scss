@@ -32,6 +32,13 @@ $susy: (
 
   &-omega {
     @include last;
+    @each $mqs, $size in $mqs {
+      @include mq(#{$size}) {
+        &-#{$mqs} {
+          @include last;
+        }
+      }
+    }
   }
 
   &-break {
