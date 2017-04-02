@@ -36,6 +36,10 @@ $susy: (
 
   &-container {
     @include container(95%);
+
+    &--tight {
+      @include container(80%);
+    }
   }
 
   &-omega {
