@@ -14,6 +14,14 @@ $susy: (
     @for $n from map-get($susy, columns) through $i {
       &-#{$i}-#{$n}  {
         @include span($i of $n);
+      }
+    }
+  }
+
+  @for $i from 1 through map-get($susy, columns) {
+    // nest loop, loop backwards
+    @for $n from map-get($susy, columns) through $i {
+      &-#{$i}-#{$n}  {
         // @each media query
         @each $mqs, $size in $mqs {
           @include mq(#{$size}) {
@@ -32,6 +40,7 @@ $susy: (
 
   &-omega {
     @include last;
+    // @each media query
     @each $mqs, $size in $mqs {
       @include mq(#{$size}) {
         &-#{$mqs} {
