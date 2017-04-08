@@ -54,12 +54,14 @@ $anchor-bottom: $grey-lighter !default;
 $anchor-bottom-hover: $orange !default;
 $mono-stack: monospace, monospace !default;
 $font-family: Helvetica, Arial, sans-serif !default;
-// temporary @todo: fix!
-$body-bg: $white !default;
 $bg-color: $white !default;
 $text-color: $grey-darkest !default;
 $spacing-unit: 0.25rem !default;
 $baseline: 1.500 !default;
+
+// temporary @todo: fix!
+$body-bg: $white !default;
+$grey: $grey-base;
 
 // mixin
 
