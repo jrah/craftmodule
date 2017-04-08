@@ -1,12 +1,6 @@
 // Module: Base
 // Based off madbit/madsauce
 
-// base variables
-$anchor-color: $blue-darker !default;
-$anchor-bottom: $grey-lighter !default;
-$anchor-bottom-hover: $orange !default;
-$anchor-visited: darken($anchor-color, 20%) !default;
-
 // Always hide an element when it has the `hidden` HTML attribute.
 %hidden,
 .hidden,
@@ -49,27 +43,16 @@ input[type="url"] {
   }
 }
 
-// If using grids, reset font-stack for all affected elements
-html, button, input, select, textarea,
-.grid [class *= "unit"] {
-  font-family: $font-family;
-}
-
 // -----------------------------------------------------------------------------
 // Typography
 // -----------------------------------------------------------------------------
 body {
   margin: 0;
   font-family: $font-family;
-  font-size: $font-size;
   font-weight: normal;
   line-height: 1.500;
   background-color: $body-bg;
   color: $text-color;
-
-  @include mq($xl-screen) {
-    font-size: $font-size * 1.125;
-  };
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -135,28 +118,16 @@ figure > img {
   display: block;
 }
 
-figcaption {
-  font-size: $font-size-small;
-}
-
 // -----------------------------------------------------------------------------
 // Links
 // -----------------------------------------------------------------------------
 a {
-  color: darken($anchor-color, 5%);
+  color: $anchor-color;
   text-decoration: none;
   border-bottom: 1px solid $anchor-bottom;
 
-  &:visited {
-    color: $anchor-visited;
-  }
-
   &:hover {
     border-bottom-color: $anchor-bottom-hover;
-  }
-
-  &:focus {
-    outline: thin dotted;
   }
 }
 
@@ -169,42 +140,4 @@ blockquote {
   border-radius: 2px;
   padding: 0.25rem 0 0.25rem 1rem;
   font-style: italic;
-}
-
-// -----------------------------------------------------------------------------
-// Code formatting
-// -----------------------------------------------------------------------------
-pre,
-code,
-samp {
-  color: $grey-dark;
-  // font-size: 1em;
-  font-style: normal;
-  font-family: $mono-stack;
-  background-color: $grey-lightest;
-  border-radius: 2px;
-  padding: 0.125rem 0.25rem;
-  line-height: 1.4;
-}
-
-code {
-  color: $text-color;
-  background-color: lighten($yellow, 15%);
-  padding: 0.125rem 0.25rem;
-}
-
-pre {
-  padding: 0.5rem 0.75rem;
-  overflow-x: scroll;
-  border-left: 6px solid $blue-light;
-  word-wrap: normal;
-
-  > code {
-    border: 0;
-    padding-right: 0;
-    padding-left: 0;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-  }
 }
