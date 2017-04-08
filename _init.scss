@@ -1,0 +1,18 @@
+// base variable
+$anchor-color: $blue-darker !default;
+$anchor-bottom: $grey-lighter !default;
+$anchor-bottom-hover: $orange !default;
+$mono-stack: monospace, monospace !default;
+$font-family: Helvetica, Arial, sans-serif !default;
+$bg-color: $white !default;
+$text-color: $grey-darkest !default;
+$spacing-unit: 1 !default;
+$baseline: 1 !default;
+
+// mixin
+
+@mixin mq($screen-size) {
+  @media screen and (min-width: $screen-size) {
+    @content;
+  }
+}
