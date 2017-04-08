@@ -43,7 +43,7 @@ $orange:  #ff6300;
 $gold:  #ffb700;
 $yellow:  #ffd700;
 
-$color-primary: $red !default;
+$primary: $red !default;
 $warning: $gold !default;
 $negative: $red !default;
 $positive: $green !default;
@@ -60,6 +60,13 @@ $spacing-unit: 1 !default;
 $baseline: 1 !default;
 
 // mixin
+
+$mqs: (
+  sm: 35.5em,
+  md: 48em,
+  lg: 64em,
+  xl: 80em
+);
 
 @mixin mq($screen-size) {
   @media screen and (min-width: $screen-size) {
