@@ -13,7 +13,10 @@
 // ----------------------------------------------------------------------------
 // Background Colours
 // ----------------------------------------------------------------------------
-
+@mixin bg-color($color, $fallback, $opacity) {
+  background-color: $fallback;
+  background-color: rgba($color, $opacity);
+}
 // Tints
 .bg-tint-0  { @include bg-color($black, transparent, 0); }
 .bg-tint-1  { @include bg-color($black, $black, 0.1); }
