@@ -73,10 +73,7 @@ $mqs: (
 );
 
 @mixin mq($mq) {
-  @if map-has-key($mqs, $mq)
-  @media screen and (min-width: $mqs, $mq) {
+  @media screen and (min-width: #{map-get($mqs, $mq)}) {
     @content;
-  } @else {
-    @error "Incorrect value passed, check `$mqs` map in `_init.scss`";
   }
 }
