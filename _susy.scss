@@ -23,9 +23,9 @@ $susy: (
     @for $n from map-get($susy, columns) through $i {
       &-#{$i}-#{$n}  {
         // @each media query
-        @each $mqs, $size in $mqs {
+        @each $mq, $size in $mqs {
           @include mq(#{$size}) {
-            &-#{$mqs} {
+            &-#{$mq} {
               @include span($i of $n);
             }
           }
@@ -45,9 +45,9 @@ $susy: (
   &-omega {
     @include last;
     // @each media query
-    @each $mqs, $size in $mqs {
+    @each $mq, $size in $mqs {
       @include mq(#{$size}) {
-        &-#{$mqs} {
+        &-#{$mq} {
           @include last;
         }
       }
