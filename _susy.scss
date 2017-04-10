@@ -24,7 +24,7 @@ $susy: (
       &-#{$i}-#{$n}  {
         // @each media query
         @each $mq, $size in $mqs {
-          @include mq(#{$size}) {
+          @include mq(#{$mq}) {
             &-#{$mq} {
               @include span($i of $n);
             }
@@ -46,7 +46,7 @@ $susy: (
     @include last;
     // @each media query
     @each $mq, $size in $mqs {
-      @include mq(#{$size}) {
+      @include mq(#{$mq}) {
         &-#{$mq} {
           @include last;
         }
