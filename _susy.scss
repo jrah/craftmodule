@@ -35,7 +35,7 @@ $susy: (
   }
 
   &-container {
-    @include container(95%);
+    @include container(90%);
 
     &--tight {
       @include container(80%);
