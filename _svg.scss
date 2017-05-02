@@ -1,0 +1,13 @@
+.svg {
+  &-dark {
+    path {
+      fill: $black;
+    }
+  }
+
+  &-light {
+    path {
+      fill: $white;
+    }
+  }
+}
